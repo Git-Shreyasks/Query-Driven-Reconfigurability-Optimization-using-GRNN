@@ -115,5 +115,4 @@ docs/            → Project report and supporting material
 Developed as part of an academic research project and later refined for structured presentation.
 
 * Shreyas K S
-* Team members
 
