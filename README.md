@@ -36,6 +36,21 @@ optimization/    → Linear programming models and solver files
 experiments/     → Outputs, logs, and evaluation results  
 docs/            → Project report and supporting material  
 ```
+---
+
+##  System Architecture
+
+The overall workflow of the system is shown below:
+
+![System Architecture](docs/system_architecture.png)
+
+The system follows a pipeline:
+
+1. Query data is collected and preprocessed
+2. Machine learning models (Decision Trees, GRNN, Temporal Weights) analyze query behavior
+3. Optimization models (Linear Programming) determine optimal configurations
+4. The system adapts dynamically based on optimized results
+
 
 ---
 
