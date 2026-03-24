@@ -100,6 +100,20 @@ docs/            → Project report and supporting material
 * Custom modeling and analysis scripts
 
 ---
+##  What This Project Does (Quick Summary)
+
+This project builds a data-driven framework to dynamically reconfigure systems based on query workloads.
+
+It combines:
+
+* Machine learning (GRNN, decision trees)
+* Optimization (linear programming)
+* Temporal modeling
+
+to determine optimal configurations under changing workloads.
+
+ In simple terms:
+The system learns how queries behave and automatically adjusts system configuration for better performance.
 
 ##  Applications
 
