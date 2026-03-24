@@ -42,7 +42,7 @@ docs/            → Project report and supporting material
 
 The overall workflow of the system is shown below:
 
-![System Architecture](docs/system_architecture.png)
+![System Architecture](docs/system_architecture.png.png)
 
 The system follows a pipeline:
 
