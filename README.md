@@ -123,6 +123,48 @@ The system learns how queries behave and automatically adjusts system configurat
 * Data-driven system configuration
 
 ---
+##  How to Run
+
+1. Prepare dataset:
+
+   * Place CSV files inside `/data`
+
+2. Run preprocessing / modeling scripts:
+
+```bash
+python models/decision_tree/Decision_tree.txt
+```
+
+3. Run optimization:
+
+* Use `.lp` files with any LP solver (e.g., CPLEX / Gurobi)
+
+4. Analyze outputs:
+
+* Check `/experiments` and `/optimization` folders
+---
+##  Results
+
+* Successfully modeled query-driven system behavior
+* Generated optimized configurations using linear programming
+* Observed improved adaptability under varying query workloads
+
+### Example Insight:
+
+* Temporal weights improved prediction of system state changes
+* Optimization models helped identify efficient configurations
+
+##  Why This Matters
+
+Modern systems must adapt to changing workloads dynamically.
+
+This project demonstrates how combining machine learning with optimization can enable:
+
+* Self-tuning systems
+* Adaptive databases
+* Intelligent infrastructure
+
+This approach can be extended to cloud systems, distributed systems, and large-scale data platforms.
 
 ##  Contributors
 
