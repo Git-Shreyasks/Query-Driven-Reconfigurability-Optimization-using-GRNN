@@ -1,0 +1,49 @@
+begin%MLPQ%
+
+Stability(network_id, stability, time) :-
+    network_id = 1,
+    stability <= 0.9,
+    stability >= 0.6,
+    time >= 10,
+    time <= 15.
+
+Stability(network_id, stability, time) :-
+    network_id = 2,
+    stability <= 0.8,
+    stability >= 0.4,
+    time >= 10,
+    time <= 15.
+
+Stability(network_id, stability, time) :-
+    network_id = 3,
+    stability <= 0.7,
+    stability >= 0.5,
+    time >= 10,
+    time <= 15.
+
+Plasticity(network_id, plasticity, time) :-
+    network_id = 1,
+    plasticity >= 0,
+    plasticity <= 1,
+    time >= 10,
+    time <= 15.
+
+Plasticity(network_id, plasticity, time) :-
+    network_id = 2,
+    plasticity >= 0,
+    plasticity <= 1,
+    time >= 10,
+    time <= 15.
+
+Plasticity(network_id, plasticity, time) :-
+    network_id = 3,
+    plasticity >= 0,
+    plasticity <= 1,
+    time >= 10,
+    time <= 15.
+
+Adaptability(max(300 stability + 250 plasticity - 10 network_id), network_id) :-
+    Stability(network_id, stability, time),
+    Plasticity(network_id, plasticity, time).
+
+end%MLPQ%

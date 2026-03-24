@@ -1,0 +1,82 @@
+begin%MLPQ%
+
+sub1(network_id, stability, plasticity) :- 
+    network_id=0, 
+    stability>=0, 
+    stability<=20, 
+    plasticity>=0, 
+    plasticity<=20.
+
+sub2(network_id, stability, plasticity, time) :- 
+    network_id=1, 
+    plasticity>=0, 
+    -3 stability-plasticity>=-15, 
+    2 stability-plasticity>=0, 
+    600 stability-307.5 plasticity-time<=-9915, 
+    time>=10000, 
+    time<=12000.
+
+sub2(network_id, stability, plasticity, time) :- 
+    network_id=2, 
+    -plasticity>=-6, 
+    3 stability+plasticity>=15, 
+    -6 stability+5 plasticity>=-30, 
+    390 stability-377.5 plasticity-time<=-10965, 
+    time>=10000, 
+    time<=12000.
+
+sub2(network_id, stability, plasticity, time) :- 
+    network_id=3, 
+    plasticity>=0, 
+    -3 stability-5 plasticity>=-60, 
+    6 stability-5 plasticity>=30, 
+    51 stability-95 plasticity-time<=-12660, 
+    time>=10000, 
+    time<=12000.
+
+sub3(network_id, stability, plasticity, time) :- 
+    network_id=4, 
+    stability>=0, 
+    -2 stability+plasticity>=0, 
+    -4 stability-3 plasticity>=-30, 
+    -132 stability+58 plasticity-time<=-9915, 
+    time>=10000, 
+    time<=12000.
+
+sub3(network_id, stability, plasticity, time) :- 
+    network_id=5, 
+    plasticity>=6, 
+    -2 stability-5 plasticity>=-50, 
+    4 stability+3 plasticity>=30, 
+    390 stability+450 plasticity-time<=-6000, 
+    time>=10000, 
+    time<=12000.
+
+sub3(network_id, stability, plasticity, time) :- 
+    network_id=6, 
+    3 stability+5 plasticity>=60, 
+    -3 stability-plasticity>=-60, 
+    stability-plasticity>=4, 
+    45 stability-105 plasticity-time<=-12780, 
+    time>=10000, 
+    time<=12000.
+
+sub3(network_id, stability, plasticity, time) :- 
+    network_id=7, 
+    2 stability+5 plasticity>=50, 
+    7 stability+5 plasticity<=100, 
+    3 stability-5 plasticity>=-50, 
+    378 stability+420 plasticity-time<=-6300, 
+    time>=10000, 
+    time<=12000.
+
+sub3(network_id, stability, plasticity, time) :- 
+    network_id=8, 
+    7 stability+5 plasticity>=100, 
+    -7 stability+plasticity>=-64, 
+    stability-plasticity>=-8, 
+    -259 stability-35 plasticity-time<=-15400, 
+    time>=10000, 
+    time<=12000.
+
+end%MLPQ%

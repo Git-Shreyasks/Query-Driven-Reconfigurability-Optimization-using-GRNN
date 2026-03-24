@@ -1,0 +1,11 @@
+begin %basic%
+
+CREATE_VIEW TemporalWeight
+
+SELECT Target, W1, W2, W3, W4, W5, W6, W7, W8, W9, W10, W11, W12
+
+FROM temporal_weights
+
+WHERE Source="b3461"
+
+end %basic%

@@ -1,0 +1,11 @@
+begin %basic%
+
+CREATE_VIEW Status
+
+SELECT NS.status
+
+FROM Network_status AS NS
+
+WHERE NS.stability=0.8, NS.plasticity=0
+
+end %basic%

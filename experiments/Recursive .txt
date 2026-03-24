@@ -1,0 +1,19 @@
+begin %SET%
+
+CREATE_VIEW Q4
+
+SELECT1 Source, Target
+
+FROM1 temporal_weights
+
+WHERE1 Target="b1280"
+
+INTUNION UNION
+
+SELECT2 Source, Target
+
+FROM2 temporal_weights
+
+WHERE2 Source="b1280"
+
+end %SET%

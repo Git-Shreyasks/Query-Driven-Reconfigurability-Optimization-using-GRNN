@@ -1,0 +1,34 @@
+begin%MLPQ%
+NetworkConstraints(network_id, stability, plasticity, time) :- 
+    network_id=1, 
+    stability>=0, 
+    stability<=1, 
+    plasticity>=0, 
+    plasticity<=1, 
+    3 stability + 2 plasticity <= 1, 
+    time >= 10, 
+    time <= 12.
+
+NetworkConstraints(network_id, stability, plasticity, time) :- 
+    network_id=2, 
+    stability>=0, 
+    stability<=1, 
+    plasticity>=0, 
+    plasticity<=1, 
+    -2 stability + 5 plasticity >= 0.3, 
+    time >= 10, 
+    time <= 12.
+
+MinimizeDeviation(min(pos_stability_deviation + neg_stability_deviation + 
+                      pos_plasticity_deviation + neg_plasticity_deviation)) :-
+    NetworkConstraints(network_id, stability, plasticity, time),
+    stability - target_stability - pos_stability_deviation  + neg_stability_deviation = 0,
+    plasticity - target_plasticity - pos_plasticity_deviation + neg_plasticity_deviation =  0,
+    pos_stability_deviation >= 0,
+    neg_stability_deviation >= 0,
+    pos_plasticity_deviation >= 0,
+    neg_plasticity_deviation >= 0,
+
+target_stability = 0.5,
+target_plasticity = 0.4.
+end%MLPQ%

@@ -1,0 +1,48 @@
+begin%TraceBack%
+
+TraceBack(Source, Target) :- 
+Target="b1280", 
+Source="b3461".
+
+
+TraceBack(Source, Target) :- 
+Target="b1280", 
+Source="b3067".
+
+
+TraceBack(Source, Target) :- 
+Target="b1280", 
+Source="b1280".
+
+
+TraceBack(Source, Target) :- 
+Target>1, 
+Source="b3461", 
+Target="b1280".
+
+
+TraceBack(Source, Target) :- 
+Target>1, 
+Source="b3067", 
+Target="b1280".
+
+
+TraceBack(Source, Target) :- 
+Target>1, 
+Source="b1280", 
+Target="b1280".
+
+
+TraceBack(Source, Target) :- 
+Target>0, 
+Source="b1001", 
+Target="b3461".
+
+
+TraceBack(Source, Target) :- 
+Target>2, 
+Source="b1020", 
+Target="b3067".
+
+
+end%TraceBack%

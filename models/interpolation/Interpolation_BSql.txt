@@ -1,0 +1,11 @@
+begin %basic%
+
+CREATE_VIEW Estimate
+
+SELECT SI.InterpolatedStability
+
+FROM Stability AS S, Stability_Interpolated AS SI
+
+WHERE S. NetworkID=1,   S.NetworkID=SI.NetworkID,  SI.Time = 60
+
+end %basic%

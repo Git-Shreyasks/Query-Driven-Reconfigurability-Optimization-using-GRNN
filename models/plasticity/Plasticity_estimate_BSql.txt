@@ -1,0 +1,11 @@
+begin %basic%
+
+CREATE_VIEW plasticityEstimate
+
+SELECT PI.InterpolatedPlasticity
+
+FROM Plasticity_Interpolated AS PI, Stability_Interpolated AS SI, Stability AS S
+
+WHERE PI.NetworkID=2,   SI.NetworkID=PI.NetworkID,     PI.Stability = 0.7  ,   PI.Time=0.4
+
+end %basic%

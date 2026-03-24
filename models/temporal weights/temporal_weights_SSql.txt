@@ -1,0 +1,19 @@
+begin %SET%
+
+CREATE_VIEW Q11
+
+SELECT1 Source, Target
+
+FROM1 temporal_weights
+
+WHERE1 Target="b1280"
+
+INTUNION UNION
+
+SELECT2 t.Source, t.Target
+
+FROM2 temporal_weights AS t, Layer2 AS p
+
+WHERE2 t.Target = p.Source
+
+end %SET%

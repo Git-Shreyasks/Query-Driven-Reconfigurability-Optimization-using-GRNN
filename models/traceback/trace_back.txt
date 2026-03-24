@@ -1,0 +1,10 @@
+begin %temporal_weights%
+temporal_weights(Source, Target) :- Source="b3461", Target="b1280".
+temporal_weights(Source, Target) :- Source="b3067", Target="b1280".
+temporal_weights(Source, Target) :- Source="b1280", Target="b1280".
+temporal_weights(Source, Target) :- Source="b3461", Target="b3497".
+temporal_weights(Source, Target) :- Source="b3497", Target="b3497".
+temporal_weights(Source, Target) :- Source="b1001", Target="b3461".
+temporal_weights(Source, Target) :- Source="b1020", Target="b3067".
+temporal_weights(Source, Target) :- Source="b1280", Target="b3497".
+end %temporal_weights%

@@ -1,0 +1,35 @@
+begin%MLPQ%
+
+Stability(NetworkID, Stability, Time) :- 
+    NetworkID = 1, Stability = 0.8, Time = 0.
+
+Stability(NetworkID, Stability, Time) :- 
+    NetworkID = 1, Stability = 0.7, Time = 10.
+
+Stability(NetworkID, Stability, Time) :- 
+    NetworkID = 2, Stability = 0.9, Time = 5.
+
+Stability(NetworkID, Stability, Time) :- 
+    NetworkID = 2, Stability = 0.8, Time = 15.
+
+Stability_Interpolated(NetworkID, Time, InterpolatedStability) :- 
+    NetworkID = 1, Time >= 0, Time < 10, 
+    InterpolatedStability - 0.5Time = 0.8.
+
+Stability_Interpolated(NetworkID, Time, InterpolatedStability) :- 
+    NetworkID = 1, Time >= 10, 
+    InterpolatedStability - 0.2Time = 0.5 .
+
+Stability_Interpolated(NetworkID, Time, InterpolatedStability) :- 
+    NetworkID = 2, Time >= 0, Time < 15, 
+    InterpolatedStability - 0.7Time = 1.
+
+Stability_Interpolated(NetworkID, Time, InterpolatedStability) :- 
+    NetworkID = 2, Time >= 15, Time < 18,
+    InterpolatedStability   = 11.5.
+
+Stability_Interpolated(NetworkID, Time, InterpolatedStability) :- 
+    NetworkID = 2, Time >= 18, 
+    InterpolatedStability - 0.9Time = 0.2.
+
+end%MLPQ%

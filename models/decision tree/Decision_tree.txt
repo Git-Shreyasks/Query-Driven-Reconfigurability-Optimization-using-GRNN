@@ -1,0 +1,28 @@
+begin%MLPQ%
+
+/* Stable-LowPlasticity Region */
+Network_status(stability, plasticity, status) :-
+     stability >= 0.7, stability <= 0.9, plasticity >= 0.1, plasticity <= 0.4, 
+     status = "Stable-LowPlasticity".
+
+/* Unstable-HighPlasticity Region */
+Network_status(stability, plasticity, status) :-
+     stability >= 0.3, stability <= 0.6, plasticity >= 0.6, plasticity <= 0.9, 
+     status = "Unstable-HighPlasticity".
+
+/* Stable-MidPlasticity Region */
+Network_status(stability, plasticity, status) :-
+     stability >= 0.5, stability <= 0.8, plasticity >= 0.3, plasticity <= 0.6, 
+     status = "Stable-MidPlasticity".
+
+/* Unstable-MidPlasticity Region */
+Network_status(stability, plasticity, status) :-
+     stability >= 0.2, stability <= 0.5, plasticity >= 0.4, plasticity <= 0.7, 
+     status = "Unstable-MidPlasticity".
+
+/* HighlyStable-LowPlasticity Region */
+Network_status(stability, plasticity, status) :-
+     stability >= 0.8, stability <= 1.0, plasticity >= 0.0, plasticity <= 0.3, 
+     status = "HighlyStable-LowPlasticity".
+
+end%MLPQ%
